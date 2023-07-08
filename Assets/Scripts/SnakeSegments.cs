@@ -10,6 +10,8 @@ public class SnakeSegments : MonoBehaviour
     private void Start() {
         m_snakeMovement = GetComponent<SnakeMovement>();
         m_segments.Add(this.transform);
+        GenerateNewSegment();
+        m_segments[1].gameObject.SetActive(false);
     }
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
