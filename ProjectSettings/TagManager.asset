@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - SnakeHead
+  - Decoy
   layers:
   - Default
   - TransparentFX

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class SnakeAI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // find nearest food,
+    // move towards it
+    
+
+    // optional decisions/random decisions
+    // when 3 blocks away from fruit and is longer than 10 segments
+    // have random chance to: 
+    // move in a circle
+    // create a circle
 }

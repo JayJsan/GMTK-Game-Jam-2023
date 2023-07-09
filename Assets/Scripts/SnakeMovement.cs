@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class SnakeMovement : MonoBehaviour
 {
+    public enum Direction {
+        Up,
+        Left,
+        Right,
+        Down,
+    }
     private Vector2 m_currentDirection;
     private SnakeSegments m_snakeSegments;
     [SerializeField]
@@ -20,6 +26,25 @@ public class SnakeMovement : MonoBehaviour
         // every x seconds move snake in current m_currentDirection.
         if (!m_isOnCooldown) {
             StartCoroutine(Cooldown());
+        }
+    }
+
+    public void SendDirection(Direction dir) {
+        if((dir == Direction.Up) && m_currentDirection != Vector2.down)
+        {
+            m_currentDirection = Vector2.up;
+        }
+        else if((dir == Direction.Down) && m_currentDirection != Vector2.up)
+        {
+            m_currentDirection = Vector2.down;
+        }
+        else if((dir == Direction.Left) && m_currentDirection != Vector2.right)
+        {
+            m_currentDirection = Vector2.left;
+        }
+        else if((dir == Direction.Right) && m_currentDirection != Vector2.left)
+        {
+            m_currentDirection = Vector2.right;
         }
     }
 
@@ -54,11 +79,15 @@ public class SnakeMovement : MonoBehaviour
         return transform.position;
     }
 
-    IEnumerator Cooldown() {
+    private IEnumerator Cooldown() {
         MoveSnake();
         m_snakeSegments.MoveSegment();
         m_isOnCooldown = true;
         yield return new WaitForSeconds(m_timer);
         m_isOnCooldown = false;
+    }
+
+    public bool CanSnakeMove() {
+        return !m_isOnCooldown;
     }
 }
