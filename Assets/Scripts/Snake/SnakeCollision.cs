@@ -7,7 +7,7 @@ public class SnakeCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<Collider2D>().enabled = false;
     }
 
     // Update is called once per frame
@@ -15,6 +15,8 @@ public class SnakeCollision : MonoBehaviour
         switch (other.tag) {
             case "SnakeHead":
                 Debug.Log("Collison!");
+                GameManager.Instance.UpdateGameState(StateType.GAME_OVER);
+                //other.gameObject.GetComponent<SnakeSegments>().RemoveLastSegment();
             break;
             default:
             //do nothing
