@@ -11,6 +11,8 @@ public class SnakeMovement : MonoBehaviour
         Down,
     }
     private Vector2 m_currentSnakeDirection;
+    private Vector2 m_currentSnakePosition;
+    private Vector2 m_lastSnakePosition;
     private Vector2 m_currentInput;
     private SnakeSegments m_snakeSegments;
     [SerializeField]
@@ -20,6 +22,8 @@ public class SnakeMovement : MonoBehaviour
 
     private void Start() {
         m_snakeSegments = GetComponent<SnakeSegments>();
+        m_lastSnakePosition = transform.position;
+        m_currentSnakePosition = transform.position;
     }
     private void Update() {
         CheckInput();
@@ -70,7 +74,10 @@ public class SnakeMovement : MonoBehaviour
     }
     
     private void MoveSnake() {
+        m_lastSnakePosition = transform.position;
         transform.position = transform.position + (Vector3)m_currentSnakeDirection;
+        m_currentSnakePosition = transform.position;
+        GetComponent<Segment>().UpdatePosition(m_currentSnakePosition,m_lastSnakePosition);
     }
 
     public Vector2 GetCurrentSnakeDirection() {
@@ -78,7 +85,11 @@ public class SnakeMovement : MonoBehaviour
     }
 
     public Vector3 GetCurrentPosition() {
-        return transform.position;
+        return m_currentSnakePosition;
+    }
+
+    public Vector3 GetLastPosition() {
+        return m_lastSnakePosition;
     }
 
     private IEnumerator Cooldown() {

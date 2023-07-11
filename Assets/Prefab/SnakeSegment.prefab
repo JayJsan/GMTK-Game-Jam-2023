@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4704604896626617076}
   - component: {fileID: 2892237145030160091}
   - component: {fileID: 4658616700869334168}
+  - component: {fileID: 5890536826777465183}
   m_Layer: 0
   m_Name: SnakeSegment
-  m_TagString: Untagged
+  m_TagString: SnakeSegment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 36678cbd125c508438dd807de15998f3, type: 3}
-  m_Color: {r: 0.18039216, g: 0.18039216, b: 0.2509804, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 67e1388361710384b9c026c789580c38, type: 3}
+  m_Color: {r: 0.18039216, g: 0.1764706, b: 0.24705884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,5 +123,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad2bdce2c8f8734281ba0e9d286bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5890536826777465183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362311664088006026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d6663c03b55a04bb0f82c9cba5a41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

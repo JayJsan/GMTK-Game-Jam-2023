@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 135220081}
   - component: {fileID: 135220079}
   - component: {fileID: 135220080}
+  - component: {fileID: 135220083}
   m_Layer: 0
   m_Name: SnakeHead
   m_TagString: SnakeHead
@@ -332,9 +333,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ddee099264a2e7e45b5fda943456c289, type: 3}
-  m_Color: {r: 0.17902279, g: 0.17902279, b: 0.254717, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -432,6 +433,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &135220083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135220076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d6663c03b55a04bb0f82c9cba5a41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &285969114
 GameObject:
   m_ObjectHideFlags: 0

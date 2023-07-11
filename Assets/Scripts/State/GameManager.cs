@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     // 7/06/23 - NEED TO IMPROVE 
     public static GameManager Instance { get; private set; }
-    private StateType m_currentGameState = StateType.DEFAULT;
+    private StateType m_currentGameState = StateType.PLAYING;
     public GameObject snakeHead;
     private SnakeMovement m_snakeHeadMovement;
     private int numberOfEnemiesToSpawn = 1;
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
             break;
 
             default:
-
+                UpdateGameState(StateType.PLAYING);
             break;
         }
     }

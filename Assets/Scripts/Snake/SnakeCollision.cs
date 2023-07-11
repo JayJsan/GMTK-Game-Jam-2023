@@ -7,7 +7,7 @@ public class SnakeCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Collider2D>().enabled = false;
+
     }
 
     // Update is called once per frame
